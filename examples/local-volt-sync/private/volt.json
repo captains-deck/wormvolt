@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "team-project",
+  "name": "Team project",
+  "purpose": "Capture team decisions and approved summaries",
+  "knowledge": {
+    "location": "private/knowledge",
+    "format": "markdown-json-v1"
+  },
+  "structure": {
+    "template": "team-project",
+    "allowedFields": [
+      "title",
+      "publicSummary",
+      "privateNotes",
+      "internalBudget"
+    ],
+    "requiredFields": ["title", "publicSummary"]
+  },
+  "audience": "private",
+  "securityGroups": ["team", "publisher"],
+  "policy": {
+    "read": ["team"],
+    "transform": ["publisher"],
+    "share": ["publisher"],
+    "write": [],
+    "publish": []
+  },
+  "autonomy": {
+    "mode": "event",
+    "actions": ["read", "transform", "share"]
+  },
+  "connections": ["publish-summary"]
+}

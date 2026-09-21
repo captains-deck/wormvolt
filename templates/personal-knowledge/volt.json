@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "personal-knowledge",
+  "name": "Personal Knowledge",
+  "purpose": "Capture useful outcomes as reviewed Markdown knowledge",
+  "knowledge": {
+    "location": "knowledge",
+    "format": "markdown-json-v1"
+  },
+  "structure": {
+    "template": "personal-knowledge",
+    "allowedFields": ["title", "summary", "notes"],
+    "requiredFields": ["title", "summary"]
+  },
+  "audience": "private",
+  "securityGroups": ["owner"],
+  "policy": {
+    "read": ["owner"],
+    "write": ["owner"],
+    "transform": [],
+    "share": [],
+    "publish": []
+  },
+  "autonomy": {
+    "mode": "manual",
+    "actions": ["read", "write"]
+  },
+  "connections": []
+}

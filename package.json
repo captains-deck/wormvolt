@@ -1,0 +1,30 @@
+{
+  "name": "wormvolt",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A living knowledge ecosystem built around Markdown volts",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b",
+    "format": "prettier --write .",
+    "lint": "prettier --check .",
+    "test": "pnpm build && node --test tests/*.test.mjs",
+    "example": "pnpm build && node examples/local-volt-sync/run.mjs",
+    "check": "pnpm lint && pnpm typecheck && pnpm test"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "prettier": "3.6.2",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "@wormvolt/core": "workspace:*",
+    "@wormvolt/connectors": "workspace:*",
+    "@wormvolt/worm-agents": "workspace:*",
+    "@wormvolt/integrators": "workspace:*"
+  }
+}

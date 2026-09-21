@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "public-summary",
+  "name": "Public summary",
+  "purpose": "Hold only approved public project summaries",
+  "knowledge": {
+    "location": "public/knowledge",
+    "format": "markdown-json-v1"
+  },
+  "structure": {
+    "template": "public-summary",
+    "allowedFields": ["title", "publicSummary"],
+    "requiredFields": ["title", "publicSummary"]
+  },
+  "audience": "public",
+  "securityGroups": ["publisher", "public-reader"],
+  "policy": {
+    "read": ["public-reader"],
+    "transform": [],
+    "share": [],
+    "write": ["publisher"],
+    "publish": ["publisher"]
+  },
+  "autonomy": {
+    "mode": "event",
+    "actions": ["read", "write", "publish"]
+  },
+  "connections": ["publish-summary"]
+}

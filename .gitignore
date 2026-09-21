@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.DS_Store
+examples/local-volt-sync/public/knowledge/*.md
