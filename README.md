@@ -99,6 +99,7 @@ data.
 | `examples/local-volt-sync` | Runnable two-volt example and synthetic source data                                                                  |
 | `templates`                | Conservative personal and team volt definitions                                                                      |
 | `docs`                     | Concepts, architecture, security, extension guidance, roadmap and decisions                                          |
+| `guides`                   | Documentation overview and the release-interface guide                                                                |
 | `tests`                    | Behaviour and end-to-end verification                                                                                |
 
 TypeScript and pnpm workspaces keep contracts visible across four small packages
@@ -134,7 +135,9 @@ filesystem tests, proposing a record format evolution, and designing
 authenticated identity or observation contracts before implementing remote
 adapters.
 
-Start with [CONTRIBUTING.md](CONTRIBUTING.md), [concepts](docs/concepts.md),
+Start with the [documentation overview](guides/README.md). That page links the
+[release-interface guide](guides/release-interfaces.md),
+[CONTRIBUTING.md](CONTRIBUTING.md), [concepts](docs/concepts.md),
 [architecture](docs/architecture.md),
 [extension guidance](docs/extension-guide.md) and the
 [roadmap](docs/roadmap.md). For security issues, see [SECURITY.md](SECURITY.md).
